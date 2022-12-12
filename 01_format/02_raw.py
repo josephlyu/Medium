@@ -2,7 +2,7 @@ def add(a, b):
  return a + b
 
 print(
- 'some really lone message that the formatter would not try and put the whole print statement in one line'
+ 'some really long message that the formatter would not try and put the whole print statement in one line'
 )
 
 matrix = [
