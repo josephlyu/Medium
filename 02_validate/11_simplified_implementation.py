@@ -1,9 +1,9 @@
-import functools
 from inspect import signature
+from functools import wraps
 import pandas as pd
 
 def validate_arguments(func):
-    @functools.wraps(func)
+    @wraps(func)
     def wrapper(*args, **kwargs):
         # Get the parameter names and annotations for the original function
         original_params = signature(func).parameters
