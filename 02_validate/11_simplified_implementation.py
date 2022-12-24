@@ -19,7 +19,7 @@ def validate_arguments(func):
         for name, param in original_params.items():
             # Check the type of the argument against the annotation
             if not isinstance(input_params.get(name), param.annotation):
-                raise ValueError(
+                raise TypeError(
                     f"Invalid argument type for {name}: expected {param.annotation}, got {type(input_params.get(name))}"
                 )
 
@@ -50,12 +50,12 @@ def get_dataframe_head(
 >>> get_dataframe_head('str')
 Traceback (most recent call last):
   ...
-ValueError: Invalid argument type for data: expected <class 'pandas.core.frame.DataFrame'>, got <class 'str'>
+TypeError: Invalid argument type for data: expected <class 'pandas.core.frame.DataFrame'>, got <class 'str'>
   
 >>> get_dataframe_head(df, 'str')
 Traceback (most recent call last):
   ...
-ValueError: Invalid argument type for n: expected <class 'int'>, got <class 'str'>
+TypeError: Invalid argument type for n: expected <class 'int'>, got <class 'str'>
 
 """
 
