@@ -7,19 +7,19 @@ def my_decorator(func):
 
 # with @ symbol 
 @my_decorator
-def say_hello(name):
+def greet(name):
     print(f"Hello, {name}!")
 
-say_hello("John")
+greet("John")
 
 # without @ symbol
-def say_hello(name):
+def greet(name):
     print(f"Hello, {name}!")
 
-my_decorator(say_hello)("John")
+my_decorator(greet)("John")
 
 """
-The above decorated say_hello and my_decorator(say_hello) are equivalent.
+The above decorated greet [line 13] and my_decorator(greet) [line 19] are equivalent.
 
 Both outputs are:
     Before the function call
